@@ -43,7 +43,7 @@ const Navbar = () => {
     </>
   );
   return (
-    <div className="px-2 py-3 flex justify-between items-center bg-[#181818] h-16">
+    <div className="absolute px-2 py-3 flex justify-between items-center h-16 bg-transparent  top-0  w-full z-50 max-w-7xl ">
       {/* logo & bars */}
       <div className="flex gap-2 justify-center items-center">
         {/* menu bar */}

@@ -41,7 +41,7 @@ const PopularMenu = () => {
   ];
 
   return (
-    <section className="md:py-16 px-4 md:px-8">
+    <section className="mb-5 md:py-16 px-4 md:px-8">
       <div className="text-center mb-12">
         <h2 data-aos="zoom-out-down" data-aos-duration="1000"
     className="text-4xl md:text-5xl heading-font font-bold text-red-600 heading-font">

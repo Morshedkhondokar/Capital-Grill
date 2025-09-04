@@ -2,7 +2,7 @@ import React from "react";
 
 const Discover = () => {
   return (
-    <section className="text-white py-16 px-6 md:px-12">
+    <section className=" bg-[#181818] py-16 px-6 md:px-12">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
         
         {/* Left Image */}

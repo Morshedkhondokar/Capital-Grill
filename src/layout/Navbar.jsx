@@ -53,7 +53,7 @@ const Navbar = () => {
           </button>
         </div>
         {/* logo */}
-        <h1 className="text-2xl md:text-5xl font-bold heading-font  text-yellow-500">
+        <h1 className="text-2xl md:text-5xl font-bold heading-font  text-red-500">
           🍔 Capital Grill
         </h1>
       </div>
@@ -63,7 +63,7 @@ const Navbar = () => {
       </div>
       {/* login */}
       <div>
-        <button className="btn bg-yellow-500 px-3 py-1 rounded-xl text-white border-none ">
+        <button className="btn bg-red-500 px-3 py-1 rounded-xl text-white border-none shadow-none">
           Login
         </button>
       </div>

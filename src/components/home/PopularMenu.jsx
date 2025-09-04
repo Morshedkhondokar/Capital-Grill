@@ -45,7 +45,7 @@ const PopularMenu = () => {
       <div className="text-center mb-12">
         <h2 data-aos="zoom-out-down" data-aos-duration="1000"
     className="text-4xl md:text-5xl heading-font font-bold text-red-600 heading-font">
-          🍔 Popular Menu
+          🍔 Popular dish
         </h2>
         <p data-aos="zoom-out-up" className="mt-4 md:text-lg max-w-2xl mx-auto">
           Discover our most ordered and loved burgers — freshly made with
@@ -67,17 +67,17 @@ const PopularMenu = () => {
               alt={item.name}
               className="h-48 w-full object-cover"
             />
-            <div className="p-5 flex flex-col justify-between h-44">
-              <h3 className="text-xl font-bold md:text-gray-600">{item.name}</h3>
+            <div className="p-5 flex flex-col justify-between h-34">
+              <h3 className="text-xl font-semibold md:text-gray-600">{item.name}</h3>
               <p className="text-gray-400 text-sm mt-2 flex-1">{item.desc}</p>
-              <div className="flex justify-between items-center mt-3">
+              {/* <div className="flex justify-between items-center mt-3">
                 <span className="text-lg font-bold text-red-600">
                   {item.price}
                 </span>
                 <button className="bg-red-500 text-white px-4 py-1 rounded-xl hover:bg-red-600 transition">
                   Order
                 </button>
-              </div>
+              </div> */}
             </div>
           </div>
           </div>

@@ -12,19 +12,19 @@ const Banner = () => {
       <div className="max-w-2xl">
         <h1 className="text-5xl md:text-7xl  font-extrabold heading-font heading-font text-yellow-500 leading-tight 
         animate__animated animate__slideInLeft">
-          Taste the Best <br /> Burgers in Town
+          Taste the <span className="text-red-500">Best <br /> Burgers</span> in Town
         </h1>
         <p className="mt-4 font-bold text-lg md:text-xl text-gray-300 body-font  animate__animated animate__slideInRight">
           Freshly grilled, served hot, and made with love. Capital Grill brings
           you the ultimate flavor experience.
         </p>
         <div className="mt-8 flex  justify-center gap-4 animate__animated animate__zoomIn">
-          <button className="btn border-none bg-yellow-500 text-black px-8  rounded-xl font-semibold shadow-lg hover:bg-yellow-400 transition">
-            Order Now
-          </button>
-          <button className="btn border border-white bg-transparent px-8 rounded-xl font-semibold text-white hover:bg-white hover:text-black transition ">
+          <button className="btn w-2xs border-none bg-red-600 px-8 text-white  rounded-xl font-semibold shadow-lg hover:bg-red-700 transition">
             See Menu
           </button>
+          {/* <button className="btn border border-white bg-transparent px-8 rounded-xl font-semibold text-white hover:bg-white hover:text-black transition ">
+            See Menu
+          </button> */}
         </div>
       </div>
     </div>

@@ -21,10 +21,10 @@ const Offer = () => {
         </p>
 
         <div className="mt-10 flex justify-center gap-4">
-          <button className="bg-red-600 text-white px-8 py-3 rounded-xl font-semibold shadow-lg hover:bg-red-700 transition">
+          {/* <button className="bg-red-600 text-white px-8 py-3 rounded-xl font-semibold shadow-lg hover:bg-red-700 transition">
             Order Now
-          </button>
-          <button className="bg-yellow-500 text-black px-8 py-3 rounded-xl font-semibold shadow-lg hover:bg-yellow-400 transition">
+          </button> */}
+          <button className="bg-yellow-500 w-3xs text-black px-8 py-3 rounded-xl font-semibold shadow-lg hover:bg-yellow-400 transition">
             View Menu
           </button>
         </div>

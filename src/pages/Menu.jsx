@@ -1,9 +1,12 @@
 import React from 'react';
+import MenuBanner from '../components/Menu/MenuBanner';
+import Menuitem from '../components/menu/MenuItems';
 
 const Menu = () => {
     return (
         <div>
-            <h1 className='text-6xl bg-red-600'>Menu</h1>
+            <MenuBanner/>
+            <Menuitem/>
         </div>
     );
 };

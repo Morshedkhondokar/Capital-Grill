@@ -1,0 +1,252 @@
+[
+  {
+    "id": 1,
+    "name": "Classic Beef Burger",
+    "category": "Burger",
+    "price": 350,
+    "image": "https://i.pinimg.com/1200x/71/2b/bb/712bbbb3cf161176dba36f23551b7061.jpg",
+    "description": "Juicy grilled beef patty with lettuce, tomato, onion, and house sauce.",
+    "rating": 4.8,
+    "isAvailable": true
+  },
+  {
+    "id": 2,
+    "name": "Cheese Burst Burger",
+    "category": "Burger",
+    "price": 420,
+    "image": "https://i.pinimg.com/1200x/54/7d/fc/547dfc88a4d2d37308b241ff2fd257d7.jpg",
+    "description": "Loaded with cheddar cheese, lettuce, and smoky sauce.",
+    "rating": 4.6,
+    "isAvailable": true
+  },
+  {
+    "id": 3,
+    "name": "Chicken Crispy Burger",
+    "category": "Burger",
+    "price": 320,
+    "image": "https://i.pinimg.com/1200x/12/d3/de/12d3defa750dd98567303225ac336456.jpg",
+    "description": "Crispy fried chicken breast topped with mayo and coleslaw.",
+    "rating": 4.7,
+    "isAvailable": true
+  },
+  {
+    "id": 4,
+    "name": "Spicy Peri Peri Burger",
+    "category": "Burger",
+    "price": 390,
+    "image": "https://i.pinimg.com/736x/fa/33/1a/fa331a81f2e48d4d1f7fa523c7bd595f.jpg",
+    "description": "Flame-grilled chicken patty tossed in peri peri sauce with jalapenos.",
+    "rating": 4.5,
+    "isAvailable": true
+  },
+  {
+    "id": 5,
+    "name": "BBQ Bacon Burger",
+    "category": "Burger",
+    "price": 480,
+    "image": "https://i.pinimg.com/1200x/b6/b6/f5/b6b6f58313ed736a56be6665ca9da91a.jpg",
+    "description": "Smoky BBQ beef patty layered with crispy bacon and cheese.",
+    "rating": 4.9,
+    "isAvailable": true
+  },
+  {
+    "id": 6,
+    "name": "Mushroom Melt Burger",
+    "category": "Burger",
+    "price": 410,
+    "image": "https://i.pinimg.com/736x/63/26/20/632620e762efd8ce36092731c13bab15.jpg",
+    "description": "Grilled beef patty topped with mushrooms and mozzarella cheese.",
+    "rating": 4.4,
+    "isAvailable": true
+  },
+  {
+    "id": 7,
+    "name": "Double Trouble Burger",
+    "category": "Burger",
+    "price": 550,
+    "image": "https://i.pinimg.com/736x/c4/e0/16/c4e016e086ac4f08baa43575930abc66.jpg",
+    "description": "Two juicy beef patties stacked with cheese and onion rings.",
+    "rating": 4.9,
+    "isAvailable": false
+  },
+  {
+    "id": 8,
+    "name": "Tex-Mex Burger",
+    "category": "Burger",
+    "price": 430,
+    "image": "https://i.pinimg.com/1200x/d3/0c/94/d30c941e8d9a43c760612dec89d380a3.jpg",
+    "description": "Beef patty with jalapenos, nacho chips, salsa, and cheese.",
+    "rating": 4.7,
+    "isAvailable": true
+  },
+  {
+    "id": 9,
+    "name": "Tandoori Chicken Burger",
+    "category": "Burger",
+    "price": 400,
+    "image": "https://i.pinimg.com/736x/4b/27/3c/4b273c93842806ec866cbfafd2710fa8.jpg",
+    "description": "Spicy tandoori chicken patty with yogurt sauce and onion.",
+    "rating": 4.8,
+    "isAvailable": true
+  },
+  {
+    "id": 10,
+    "name": "Mega Cheese Double Patty",
+    "category": "Burger",
+    "price": 560,
+    "image": "https://i.pinimg.com/736x/17/6e/57/176e57d50e841f240b97d6fa8d672822.jpg",
+    "description": "Double beef patties loaded with triple cheese and spicy mayo.",
+    "rating": 4.9,
+    "isAvailable": false
+  },
+  {
+    "id": 11,
+    "name": "Coca Cola",
+    "category": "Drink",
+    "price": 80,
+    "image": "https://i.pinimg.com/736x/d9/90/b4/d990b4e3fafb7073f2ab7241e48aea0b.jpg",
+    "description": "Chilled fizzy soft drink.",
+    "rating": 4.6,
+    "isAvailable": true
+  },
+  {
+    "id": 12,
+    "name": "Pepsi",
+    "category": "Drink",
+    "price": 80,
+    "image": "https://i.pinimg.com/1200x/a6/3b/e9/a63be98031b4e6dd0b4985c56aaf0f51.jpg",
+    "description": "Cool refreshing soft drink.",
+    "rating": 4.5,
+    "isAvailable": true
+  },
+  {
+    "id": 13,
+    "name": "Lemon Mint Mojito",
+    "category": "Drink",
+    "price": 150,
+    "image": "https://i.pinimg.com/1200x/aa/6f/95/aa6f95f7977e2664b83b226e339c895a.jpg",
+    "description": "Fresh lemon juice with mint leaves and soda.",
+    "rating": 4.7,
+    "isAvailable": true
+  },
+  {
+    "id": 14,
+    "name": "Strawberry Milkshake",
+    "category": "Drink",
+    "price": 220,
+    "image": "https://i.pinimg.com/736x/23/bb/22/23bb2225da3229b4f3b85f0968a0e2c0.jpg",
+    "description": "Creamy milkshake made with strawberries.",
+    "rating": 4.9,
+    "isAvailable": true
+  },
+  {
+    "id": 15,
+    "name": "Iced Americano",
+    "category": "Drink",
+    "price": 180,
+    "image": "https://i.pinimg.com/1200x/a4/2c/52/a42c52c7a0aa7859cf49b28f9d124041.jpg",
+    "description": "Refreshing iced coffee.",
+    "rating": 4.4,
+    "isAvailable": true
+  },
+  {
+    "id": 16,
+    "name": "Mango Smoothie",
+    "category": "Drink",
+    "price": 200,
+    "image": "https://i.pinimg.com/736x/1e/20/22/1e20227d16daf0d7ae4f244d92fa00ee.jpg",
+    "description": "Smoothie made with fresh mangoes and milk.",
+    "rating": 4.8,
+    "isAvailable": true
+  },
+  {
+    "id": 17,
+    "name": "Chocolate Frappe",
+    "category": "Drink",
+    "price": 250,
+    "image": "https://i.pinimg.com/736x/82/33/a0/8233a09ba26e0e430a47612b84d66bbd.jpg",
+    "description": "Cold chocolate blended with milk and ice cream.",
+    "rating": 4.8,
+    "isAvailable": true
+  },
+  {
+    "id": 18,
+    "name": "Virgin Mojito",
+    "category": "Drink",
+    "price": 160,
+    "image": "https://i.pinimg.com/1200x/34/4a/17/344a17a59ae8880b7ca75c8e6e42cf73.jpg",
+    "description": "Refreshing mint, lime, and soda.",
+    "rating": 4.6,
+    "isAvailable": true
+  },
+  {
+    "id": 19,
+    "name": "Chocolate Lava Cake",
+    "category": "Dessert",
+    "price": 280,
+    "image": "https://i.pinimg.com/736x/88/20/f9/8820f92c4aefc688a18b5488bafb42bf.jpg",
+    "description": "Warm chocolate cake with molten center.",
+    "rating": 4.9,
+    "isAvailable": true
+  },
+  {
+    "id": 20,
+    "name": "Cheesecake Slice",
+    "category": "Dessert",
+    "price": 300,
+    "image": "https://i.pinimg.com/1200x/f4/de/a3/f4dea3e8cbb21d792ca452be26e88c4a.jpg",
+    "description": "Creamy cheesecake with strawberry topping.",
+    "rating": 4.7,
+    "isAvailable": true
+  },
+  {
+    "id": 21,
+    "name": "Brownie with Ice Cream",
+    "category": "Dessert",
+    "price": 260,
+    "image": "https://i.pinimg.com/1200x/15/f0/eb/15f0ebcecd14c01ba7617ec1406a7fe3.jpg",
+    "description": "Hot brownie served with vanilla ice cream.",
+    "rating": 4.8,
+    "isAvailable": true
+  },
+  {
+    "id": 22,
+    "name": "Oreo Sundae",
+    "category": "Dessert",
+    "price": 240,
+    "image": "https://i.pinimg.com/736x/cb/1f/94/cb1f9442861a8e8ff579e3ad06d31908.jpg",
+    "description": "Vanilla ice cream with Oreo crumbs.",
+    "rating": 4.6,
+    "isAvailable": true
+  },
+  {
+    "id": 23,
+    "name": "Fruit Custard",
+    "category": "Dessert",
+    "price": 200,
+    "image": "https://i.pinimg.com/1200x/44/a5/49/44a549f315f7141e854ea37b70a6d1e6.jpg",
+    "description": "Fresh fruits mixed in creamy custard.",
+    "rating": 4.5,
+    "isAvailable": true
+  },
+  {
+    "id": 24,
+    "name": "Red Velvet Pastry",
+    "category": "Dessert",
+    "price": 220,
+    "image": "https://i.pinimg.com/1200x/df/6e/0a/df6e0a20c04a1a9c0785867ffb1fb655.jpg",
+    "description": "Moist red velvet pastry with cream cheese frosting.",
+    "rating": 4.7,
+    "isAvailable": true
+  },
+  {
+    "id": 25,
+    "name": "Ice Cream Sundae",
+    "category": "Dessert",
+    "price": 180,
+    "image": "https://i.pinimg.com/1200x/62/19/aa/6219aa159651314cd006bd7abbba1811.jpg",
+    "description": "Two scoops of ice cream topped with nuts and syrup.",
+    "rating": 4.6,
+    "isAvailable": true
+  }
+]

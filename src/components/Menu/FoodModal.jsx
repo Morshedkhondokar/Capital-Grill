@@ -19,7 +19,7 @@ const FoodModal = ({ selectedFood,setSelectedFood}) => {
             : item
         );
       } else {
-        // if don't heve this item so return new arr 
+        // if don't heve this item. return new arr 
         return [...prevItems, selectedFood];
       }
     });

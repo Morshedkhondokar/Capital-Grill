@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router";
 
 const Discover = () => {
   return (
@@ -20,7 +21,7 @@ const Discover = () => {
           data-aos="fade-left"
           data-aos-duration="1200"
         >
-          <h2 className="text-3xl md:text-5xl font-extrabold leading-snug">
+          <h2 className="text-3xl lg:text-5xl font-extrabold leading-snug">
             Find Your <span className="text-yellow-500">Best Tasted</span>{" "}
             <br /> Food & Drink <br /> Just in One Place
           </h2>
@@ -29,9 +30,11 @@ const Discover = () => {
             flavors that hit the spot every time. Taste freshness, quality, and
             love — all served hot and fast.
           </p>
-          <button className="bg-red-500 hover:bg-red-600 px-6 py-3 rounded-xl font-semibold shadow-lg transition duration-300">
+          <Link to='/menu'>
+            <button className="bg-red-500 hover:bg-red-600 px-6 py-3 rounded-xl font-semibold shadow-lg transition duration-300">
             Explore Menu
           </button>
+          </Link>
         </div>
       </div>
     </section>

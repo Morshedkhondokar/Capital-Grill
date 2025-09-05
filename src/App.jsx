@@ -5,6 +5,7 @@ import { useEffect } from "react";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import Footer from "./layout/Footer";
+import ScrollToTop from "./components/ScrollToTop";
 
 const App = () => {
   useEffect(() => {
@@ -15,6 +16,7 @@ const App = () => {
 
   return (
     <div className="max-w-7xl mx-auto overflow-x-hidden">
+      <ScrollToTop/>
       <Navbar />
       <Outlet />
       <Footer/>

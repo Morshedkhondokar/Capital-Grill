@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router";
 
 const Offer = () => {
   return (
@@ -24,9 +25,11 @@ const Offer = () => {
           {/* <button className="bg-red-600 text-white px-8 py-3 rounded-xl font-semibold shadow-lg hover:bg-red-700 transition">
             Order Now
           </button> */}
-          <button className="bg-yellow-500 w-3xs text-black px-8 py-3 rounded-xl font-semibold shadow-lg hover:bg-yellow-400 transition">
+          <Link to='/menu'>
+            <button className="bg-gradient-to-r from-red-600 to-yellow-500 px-12 py-3 rounded-xl font-semibold shadow-lg transition duration-300">
             View Menu
           </button>
+          </Link>
         </div>
       </div>
     </section>

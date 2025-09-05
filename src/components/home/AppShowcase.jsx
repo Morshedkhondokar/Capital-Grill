@@ -29,7 +29,7 @@ const AppShowcase = () => {
           </p>
 
           {/* Features */}
-          <div className="space-y-4 mt-4 w-96 ">
+          <div className="space-y-4 mt-4 w-96 pr-10">
             <div className="flex items-center bg-[#181818] px-4 py-3 rounded-lg gap-4">
               <span className="bg-yellow-500 p-3 rounded-lg">
                <TbTruckDelivery className="text-xl text-black" />

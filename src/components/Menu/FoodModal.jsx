@@ -1,20 +1,46 @@
+import { useContext } from "react";
+import CartContext from "../../context/CartContext";
 
-const FoodModal = ({selectedFood,setSelectedFood}) => {
+const FoodModal = ({ selectedFood,setSelectedFood}) => {
+  const { setCartItems } = useContext(CartContext);
 
-    const handleQuantityPlus = ()=>{
-        setSelectedFood({...selectedFood, quantity:selectedFood.quantity + 1})
+  const handleAddToCart = () => {
+    setCartItems((prevItems) => {
+      // checking
+      const existingItem = prevItems.find(
+        (item) => item.id === selectedFood.id
+      );
+
+      if (existingItem) {
+        // if have this item
+        return prevItems.map((item) =>
+          item.id === selectedFood.id
+            ? { ...item, quantity: item.quantity + selectedFood.quantity }
+            : item
+        );
+      } else {
+        // if don't heve this item so return new arr 
+        return [...prevItems, selectedFood];
+      }
+    });
+    // modal close
+    document.getElementById("food_modal").close();
+  };
+
+  // Quantity increase
+  const handleQuantityPlus = () => {
+    setSelectedFood({ ...selectedFood, quantity: selectedFood.quantity + 1 });
+  };
+
+  // Quantity decrease 
+  const handleQuantityMinus = () => {
+    if (selectedFood.quantity > 1) {
+      setSelectedFood({ ...selectedFood, quantity: selectedFood.quantity - 1 });
     }
-    const handleQuantityMinus = ()=>{
-       if (selectedFood.quantity <= 1) {
-        // Close modal when quantity reaches 0 or 1
-        document.getElementById('food_modal').close();
-        return; // exit so we don't set negative quantity
-    }
-        setSelectedFood({...selectedFood, quantity:selectedFood.quantity - 1})
-    }
-    return (
-        <div>
-            {/* modal */}
+  };
+  return (
+    <div>
+      {/* modal */}
       <dialog id="food_modal" className="modal">
         <div className="modal-box bg-[#181818] ">
           {/* Close Button */}
@@ -36,31 +62,44 @@ const FoodModal = ({selectedFood,setSelectedFood}) => {
           {/* Food Details */}
           <h3 className="font-bold text-xl text-red-500">
             {selectedFood?.name}
-          </h3> 
+          </h3>
           <p className="text-gray-300 mt-2">{selectedFood?.description}</p>
           {/* price and quantity */}
-         <div className='flex justify-between items-center'>
+          <div className="flex justify-between items-center">
             {/* priece */}
-             <p className="text-yellow-400 font-semibold mt-3">
-            Price: {selectedFood?.price} BDT
-          </p>
+            <p className="text-yellow-400 font-semibold mt-3">
+              Price: {selectedFood?.price} BDT
+            </p>
 
-          {/* Quantity Selector */}
-          <div className="flex items-center gap-3 mt-4">
-            <button onClick={handleQuantityMinus}  className="btn btn-sm bg-red-600  text-white text-2xl">-</button>
-            {selectedFood?.quantity}
-            <button onClick={handleQuantityPlus} className="btn btn-sm bg-red-600 text-white text-2xl">+</button>
+            {/* Quantity Selector */}
+            <div className="flex items-center gap-3 mt-4">
+              <button
+                onClick={handleQuantityMinus}
+                className="btn btn-sm bg-red-600  text-white text-2xl"
+              >
+                -
+              </button>
+              {selectedFood?.quantity}
+              <button
+                onClick={handleQuantityPlus}
+                className="btn btn-sm bg-red-600 text-white text-2xl"
+              >
+                +
+              </button>
+            </div>
           </div>
-         </div>
 
-          {/* Confirm Button */}
-          <button className="btn w-full mt-6 bg-gradient-to-r from-red-600 to-yellow-500 text-white font-bold">
+          {/* add to cart || Confirm Button */}
+          <button
+            onClick={handleAddToCart}
+            className="btn w-full mt-6 bg-gradient-to-r from-red-600 to-yellow-500 text-white font-bold"
+          >
             Add to Cart
           </button>
         </div>
       </dialog>
-        </div>
-    );
+    </div>
+  );
 };
 
 export default FoodModal;

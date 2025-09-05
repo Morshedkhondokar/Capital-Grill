@@ -1,8 +1,9 @@
 import { FaStar } from "react-icons/fa6";
 
-const FoodCard = ({ item }) => {
+const FoodCard = ({ item, setSelectedFood }) => {
   return (
-    <div className="bg-[#181818] rounded-xl overflow-hidden shadow-lg hover:scale-105 transform transition duration-300">
+    <div  data-aos="fade-up" data-aos-duration="2000" >
+      <div className="bg-[#181818] rounded-xl overflow-hidden shadow-lg hover:scale-105 transform transition duration-300">
       {/* Image */}
       <img
         src={item.image}
@@ -25,15 +26,26 @@ const FoodCard = ({ item }) => {
 
           {/* Rating */}
           <div className="">
-          <p className="text-amber-500 flex justify-center ">  {item.rating}<FaStar  className="text-xl ml-1.5"/></p>
+            <p className="text-amber-500 flex justify-center ">
+              {" "}
+              {item.rating}
+              <FaStar className="text-xl ml-1.5" />
+            </p>
           </div>
         </div>
 
         {/* Order Button */}
-        <button className="mt-3 w-full bg-red-600 hover:bg-red-700 text-white font-bold py-2 rounded-lg transition duration-300">
+        <button
+          onClick={() => {
+            setSelectedFood(item);
+            document.getElementById("food_modal").showModal();
+          }}
+          className="cursor-pointer mt-3 w-full bg-red-600 hover:bg-red-700 text-white font-bold py-2 rounded-lg transition duration-300"
+        >
           Order Now
         </button>
       </div>
+    </div>
     </div>
   );
 };

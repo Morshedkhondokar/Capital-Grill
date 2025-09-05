@@ -1,9 +1,10 @@
 import React from 'react';
+import CartBanner from '../components/cart/CartBanner';
 
 const Cart = () => {
     return (
         <div>
-            <h1 className='text-6xl'>Cart</h1>
+            <CartBanner/>
         </div>
     );
 };

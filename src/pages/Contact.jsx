@@ -1,9 +1,12 @@
 import React from 'react';
+import ContactBanner from'../components/Contact/ContactBanner'
+import ContactForm from '../components/Contact/ContactForm';
 
 const Contact = () => {
     return (
         <div>
-            <h1 className='text-6xl bg-amber-700'>contact us </h1>
+            <ContactBanner/>
+            <ContactForm/>
         </div>
     );
 };

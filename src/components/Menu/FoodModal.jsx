@@ -45,7 +45,7 @@ const FoodModal = ({ selectedFood,setSelectedFood}) => {
         <div className="modal-box bg-[#181818] ">
           {/* Close Button */}
           <form method="dialog">
-            <button className="btn btn-ghost btn-circle absolute right-1 top-1.5 text-xl font-bold">
+            <button className="btn btn-ghost btn-circle absolute right-1 top-1.5 bg-red-600 text-xl font-bold">
               ✕
             </button>
           </form>

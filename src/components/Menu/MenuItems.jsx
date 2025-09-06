@@ -27,10 +27,10 @@ const Menu = ({setSelectedFood}) => {
         </p>
         {/* category */}
         <div data-aos="zoom-out-up" className="flex justify-center gap-5 max-w-[400px] mx-auto mt-2 border-yellow-500   border-t-2 pt-3">
-        <button onClick={()=> setCategory('All')} className={`btn shadow-none  rounded-xl ${category === "All" ? "bg-red-500 border-none text-white " : "border-2 border-red-500 text-red-500  bg-transparent"}`}>All</button>
-        <button onClick={()=> setCategory('Burger')} className={`btn shadow-none rounded-xl  ${category === "Burger" ? "bg-red-500 border-none text-white " : "border-2 border-red-500 text-red-500  bg-transparent"}`}>Burger</button>
-        <button onClick={()=> setCategory('Drink')} className={`btn shadow-none rounded-xl  ${category === "Drink" ? "bg-red-500 border-none text-white " : "border-2 border-red-500 text-red-500  bg-transparent"}`}>Drink</button>
-        <button onClick={()=> setCategory('Dessert')} className={`btn shadow-none rounded-xl  ${category === "Dessert" ? "bg-red-500 border-none text-white  " : "border-2 border-red-500 text-red-500  bg-transparent"}`}>Dessert</button>
+        <button onClick={()=> setCategory('All')} className={`btn shadow-none  rounded-xl hover:scale-110 transition ${category === "All" ? "bg-red-500 border-none text-white " : "border-2 border-red-500 text-red-500  bg-transparent"}`}>All</button>
+        <button onClick={()=> setCategory('Burger')} className={`btn shadow-none rounded-xl hover:scale-110 transition  ${category === "Burger" ? "bg-red-500 border-none text-white " : "border-2 border-red-500 text-red-500  bg-transparent"}`}>Burger</button>
+        <button onClick={()=> setCategory('Drink')} className={`btn shadow-none rounded-xl hover:scale-110 transition  ${category === "Drink" ? "bg-red-500 border-none text-white " : "border-2 border-red-500 text-red-500  bg-transparent"}`}>Drink</button>
+        <button onClick={()=> setCategory('Dessert')} className={`btn shadow-none rounded-xl hover:scale-110 transition  ${category === "Dessert" ? "bg-red-500 border-none text-white  " : "border-2 border-red-500 text-red-500  bg-transparent"}`}>Dessert</button>
       </div>
       </div>
       

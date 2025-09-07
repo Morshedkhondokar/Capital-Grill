@@ -6,6 +6,7 @@ import Aos from "aos";
 import "aos/dist/aos.css";
 import Footer from "./layout/Footer";
 import ScrollToTop from "./components/ScrollToTop";
+import { Toaster } from "react-hot-toast";
 
 const App = () => {
   useEffect(() => {
@@ -16,6 +17,7 @@ const App = () => {
 
   return (
     <div className="max-w-7xl mx-auto overflow-x-hidden">
+       <Toaster />
       <ScrollToTop/>
       <Navbar />
       <Outlet />

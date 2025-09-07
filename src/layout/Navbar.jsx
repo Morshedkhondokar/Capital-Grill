@@ -1,10 +1,12 @@
-import { useState } from "react";
+import { useState,useContext } from "react";
 import { FaBars } from "react-icons/fa";
 import { IoClose } from "react-icons/io5";
 import { Link, NavLink } from "react-router";
+import AuthContext from '../context/AuthContext'
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const {user} = useContext(AuthContext)
 
   const links = (
     <>
@@ -63,11 +65,13 @@ const Navbar = () => {
       </div>
       {/* login */}
       <div>
-        <Link to='/login'>
+        {
+          user ? <div classname="size-4 bg-amber-500"></div> : <Link to='/login'>
           <button className="btn bg-red-500 px-3 py-1 rounded-xl text-white border-none shadow-none">
           Login
         </button>
         </Link>
+        }
       </div>
       {/* mobile nav links design */}
       <div

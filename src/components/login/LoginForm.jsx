@@ -2,6 +2,7 @@ import React, { useContext, useState } from "react";
 import { Link } from "react-router";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import AuthContext from "../../context/AuthContext";
+import GoogleLoginBtn from "../GoogleLoginBtn";
 
 const LoginForm = () => {
   const [showPassword, setShowPassword] = useState(false);
@@ -25,7 +26,7 @@ const LoginForm = () => {
       });
   };
   return (
-    <div className="min-h-screen flex items-center justify-center bg-[#161414] px-6 py-24">
+    <div className="min-h-screen flex flex-col gap-12 items-center justify-center bg-[#161414] px-6 py-24 ">
       <div className="w-full max-w-md bg-[#181818]  rounded-2xl shadow-lg shadow-red-500 p-8">
         {/* Heading */}
         <h2 className="text-3xl font-bold text-center text-red-500 mb-6">
@@ -107,6 +108,8 @@ const LoginForm = () => {
           </Link>
         </p>
       </div>
+      {/* login with google */}
+      <GoogleLoginBtn/>
     </div>
   );
 };

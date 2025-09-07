@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { FaBars } from "react-icons/fa";
 import { IoClose } from "react-icons/io5";
-import { NavLink } from "react-router";
+import { Link, NavLink } from "react-router";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -63,9 +63,11 @@ const Navbar = () => {
       </div>
       {/* login */}
       <div>
-        <button className="btn bg-red-500 px-3 py-1 rounded-xl text-white border-none shadow-none">
+        <Link to='/login'>
+          <button className="btn bg-red-500 px-3 py-1 rounded-xl text-white border-none shadow-none">
           Login
         </button>
+        </Link>
       </div>
       {/* mobile nav links design */}
       <div

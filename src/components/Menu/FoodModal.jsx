@@ -1,5 +1,6 @@
 import { useContext } from "react";
 import CartContext from "../../context/CartContext";
+import toast from "react-hot-toast";
 
 const FoodModal = ({ selectedFood,setSelectedFood}) => {
   const { setCartItems } = useContext(CartContext);
@@ -25,6 +26,8 @@ const FoodModal = ({ selectedFood,setSelectedFood}) => {
     });
     // modal close
     document.getElementById("food_modal").close();
+    // toast msg
+    toast.success(`Add to cart ${selectedFood.name}`)
   };
 
   // Quantity increase

@@ -7,11 +7,13 @@ import Cart from '../pages/Cart';
 import Login from '../pages/Login';
 import Register from '../pages/Register';
 import Contact from '../pages/Contact';
+import ErrorPage from '../pages/ErrorPage';
 
 const Router = createBrowserRouter([
     {
         path:'/',
         element:<App/>,
+        errorElement:<ErrorPage/>,
         children:[
             {
                 path:'/',

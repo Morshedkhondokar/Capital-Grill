@@ -2,6 +2,7 @@ import React from "react";
 import { MapPin, Phone, Mail, Clock, Star, Heart, ChefHat } from "lucide-react";
 
 import { FaFacebookF, FaInstagram, FaTwitter, FaYoutube } from "react-icons/fa";
+import { Link } from "react-router";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -88,37 +89,37 @@ const Footer = () => {
             </h3>
             <ul className="space-y-3">
               <li>
-                <a
-                  href="#home"
+                <Link
+                  to="/"
                   className="text-gray-300 hover:text-yellow-400 transition duration-300 text-sm"
                 >
                   Home
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="#menu"
+                <Link
+                  to="/menu"
                   className="text-gray-300 hover:text-yellow-400 transition duration-300 text-sm"
                 >
                   Menu
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="#about"
+                <Link
+                  to="/cart"
                   className="text-gray-300 hover:text-yellow-400 transition duration-300 text-sm"
                 >
-                  About Us
-                </a>
+                  Cart
+                </Link>
               </li>
                
               <li>
-                <a
-                  href="#contact"
+                <Link
+                  to="/contact"
                   className="text-gray-300 hover:text-yellow-400 transition duration-300 text-sm"
                 >
                   Contact
-                </a>
+                </Link>
               </li>
             </ul>
           </div>

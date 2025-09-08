@@ -9,6 +9,7 @@ import Register from '../pages/Register';
 import Contact from '../pages/Contact';
 import ErrorPage from '../pages/ErrorPage';
 import ProfilePage from '../pages/ProfilePage';
+import PrivateRouter from './PrivateRouter';
 
 const Router = createBrowserRouter([
     {
@@ -43,7 +44,7 @@ const Router = createBrowserRouter([
             },
             {
                 path:'/profile',
-                element:<ProfilePage/>
+                element:<PrivateRouter><ProfilePage/></PrivateRouter>
             }
         ]
     }

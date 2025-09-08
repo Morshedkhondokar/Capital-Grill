@@ -1,11 +1,23 @@
 import { useContext } from "react";
 import CartContext from "../../context/CartContext";
 import toast from "react-hot-toast";
+import AuthContext from "../../context/AuthContext";
+import { useLocation, useNavigate } from "react-router";
 
-const FoodModal = ({ selectedFood,setSelectedFood}) => {
+const FoodModal = ({ selectedFood, setSelectedFood }) => {
   const { setCartItems } = useContext(CartContext);
+  const { user } = useContext(AuthContext);
+  const navigate = useNavigate();
+  const location = useLocation();
 
   const handleAddToCart = () => {
+    if (!user) {
+      toast.error("Please login first!");
+      
+      navigate("/login", { state: { from: location } });
+      return;
+    }
+
     setCartItems((prevItems) => {
       // checking
       const existingItem = prevItems.find(
@@ -20,14 +32,14 @@ const FoodModal = ({ selectedFood,setSelectedFood}) => {
             : item
         );
       } else {
-        // if don't heve this item. return new arr 
+        // if don't heve this item. return new arr
         return [...prevItems, selectedFood];
       }
     });
     // modal close
     document.getElementById("food_modal").close();
     // toast msg
-    toast.success(`Add to cart ${selectedFood.name}`)
+    toast.success(`Add to cart ${selectedFood.name}`);
   };
 
   // Quantity increase
@@ -35,7 +47,7 @@ const FoodModal = ({ selectedFood,setSelectedFood}) => {
     setSelectedFood({ ...selectedFood, quantity: selectedFood.quantity + 1 });
   };
 
-  // Quantity decrease 
+  // Quantity decrease
   const handleQuantityMinus = () => {
     if (selectedFood.quantity > 1) {
       setSelectedFood({ ...selectedFood, quantity: selectedFood.quantity - 1 });

@@ -1,10 +1,19 @@
 import { useContext, useState } from "react";
 import AuthContext from "../context/AuthContext";
 import toast from "react-hot-toast";
+import CartContext from "../context/CartContext";
 
 const ProfilePage = () => {
   const { user, logoutUser, updateUserProfile, setUser } = useContext(AuthContext);
   const [isUpdate, setIsUpdate] = useState(false);
+  const {clearCart} = useContext(CartContext)
+
+  const handleLogout = () => {
+  logoutUser()
+  .then(() => {
+    clearCart(); 
+  });
+};
 
   const handleUpdate = (e) => {
     e.preventDefault();
@@ -88,7 +97,7 @@ const ProfilePage = () => {
 
           <button
             type="button"
-            onClick={logoutUser}
+            onClick={handleLogout}
             className="btn border-none shadow-none  px-6 py-2 rounded-lg bg-gray-700 text-red-400 font-bold hover:bg-gray-600 transition"
           >
             Logout

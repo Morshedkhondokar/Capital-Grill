@@ -1,13 +1,14 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import CartContext from "../../context/CartContext";
 import { IoCloseCircleSharp } from "react-icons/io5";
 import { FaMinusCircle, FaPlusCircle, FaRunning } from "react-icons/fa";
 import { MdOutlineDeleteForever } from "react-icons/md";
 import { Link } from "react-router";
+import CheckoutModal from "../CheckoutModal";
 
 const CartItems = () => {
   const { cartItems, setCartItems } = useContext(CartContext);
-
+ const [isCheckoutOpen, setIsCheckoutOpen] = useState(false);
   // Quantity Increase
   const handleQuantityPlus = (id) => {
     setCartItems((prevItems) =>
@@ -37,6 +38,11 @@ const CartItems = () => {
     (total, item) => total + item.price * item.quantity,
     0
   );
+
+  const handleCloseModal = () => {
+    setIsCheckoutOpen(false);
+    setCartItems([]); // clear cart
+  };
 
   return (
     <div className="px-6 py-12 md:py-20 text-white">
@@ -135,11 +141,17 @@ const CartItems = () => {
             <span>Total</span>
             <span>{subtotal} BDT</span>
           </div>
-          <button className="cursor-pointer text-xl w-full bg-gradient-to-r from-red-600 to-yellow-500 py-3 rounded-lg font-bold text-white hover:scale-90 transition ease-in-out">
+          <button  onClick={() => setIsCheckoutOpen(true)} className="cursor-pointer text-xl w-full bg-gradient-to-r from-red-600 to-yellow-500 py-3 rounded-lg font-bold text-white hover:scale-90 transition ease-in-out">
             Checkout
           </button>
         </div>
       )}
+       {/* Checkout Modal */}
+      <CheckoutModal
+        isOpen={isCheckoutOpen}
+        onClose={handleCloseModal}
+        total={subtotal}
+      />
     </div>
   );
 };

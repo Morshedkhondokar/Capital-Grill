@@ -66,7 +66,7 @@ const Navbar = () => {
       {/* login */}
       <div>
         {
-          user ? <div classname="size-4 bg-amber-500"></div> : <Link to='/login'>
+          user ? <div className="size-8 bg-amber-500 rounded-2xl"></div> : <Link to='/login'>
           <button className="btn bg-red-500 px-3 py-1 rounded-xl text-white border-none shadow-none">
           Login
         </button>

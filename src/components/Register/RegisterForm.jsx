@@ -2,6 +2,7 @@ import React, { useContext, useState } from "react";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import AuthContext from "../../context/AuthContext";
 import toast from "react-hot-toast";
+import GoogleLoginBtn from '../GoogleLoginBtn'
 
 const RegisterForm = () => {
   const [showPassword, setShowPassword] = useState(false);
@@ -36,7 +37,7 @@ const RegisterForm = () => {
     e.target.reset();
   };
   return (
-    <div className="min-h-screen flex items-center justify-center bg-[#161414] px-6 py-24">
+    <div className="min-h-screen flex flex-col gap-12 items-center justify-center bg-[#161414] px-6 py-24">
       <div className="w-full max-w-md bg-[#181818] rounded-2xl shadow-lg shadow-red-500 p-8">
         {/* Heading */}
         <h2 className="text-3xl font-bold text-center text-red-500 mb-6">
@@ -151,6 +152,9 @@ const RegisterForm = () => {
           </a>
         </p>
       </div>
+
+      {/* log in with google */}
+      <GoogleLoginBtn/>
     </div>
   );
 };

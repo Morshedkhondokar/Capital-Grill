@@ -1,15 +1,23 @@
 import { useContext, useState } from "react";
 import AuthContext from "../context/AuthContext";
+import toast from "react-hot-toast";
 
 const ProfilePage = () => {
-  const { user, logoutUser } = useContext(AuthContext);
+  const { user, logoutUser, updateUserProfile, setUser } = useContext(AuthContext);
   const [isUpdate, setIsUpdate] = useState(false);
 
-  // Update submit handler
   const handleUpdate = (e) => {
     e.preventDefault();
-    alert("Profile updated successfully!");
-    setIsUpdate(false);
+    const fullname = e.target.fullname.value;
+    const photoURL = e.target.photoURL.value;
+
+    updateUserProfile({ displayName: fullname, photoURL: photoURL })
+      .then(() => {
+        setUser({ ...user, displayName: fullname, photoURL: photoURL });
+        toast.success("Profile updated successfully!")
+        setIsUpdate(false);
+      })
+      .catch((err) => console.log(err));
   };
 
   // Edit mode open
@@ -23,10 +31,7 @@ const ProfilePage = () => {
         {/* User Image */}
         <div className="flex flex-col items-center mb-6">
           <img
-            src={
-              user?.photoURL ||
-              "https://i.pinimg.com/474x/07/c4/72/07c4720d19a9e9edad9d0e939eca304a.jpg"
-            }
+            src={user?.photoURL || "https://i.pinimg.com/474x/07/c4/72/07c4720d19a9e9edad9d0e939eca304a.jpg"}
             alt="User"
             className="w-24 h-24 rounded-full border-4 border-red-500 object-cover"
           />
@@ -36,30 +41,29 @@ const ProfilePage = () => {
           <p className="text-gray-400 text-sm">{user?.email}</p>
         </div>
 
-        {/* Show Form Only if Update Mode On */}
+        {/* Update Form */}
         {isUpdate && (
           <form onSubmit={handleUpdate} className="space-y-4">
             <div>
               <label className="text-sm mb-2 text-gray-300">Full Name</label>
               <input
                 type="text"
+                name="fullname"
                 placeholder="Enter your Full Name"
                 className="w-full px-4 py-2 rounded-lg bg-gray-800 border border-gray-600 text-white focus:outline-none focus:ring-2 focus:ring-red-500"
               />
             </div>
 
             <div>
-              <label className="text-sm mb-2 text-gray-300">
-                Profile Image URL
-              </label>
+              <label className="text-sm mb-2 text-gray-300">Profile Image URL</label>
               <input
                 type="text"
+                name="photoURL"
                 placeholder="Enter your Photo URL"
                 className="w-full px-4 py-2 rounded-lg bg-gray-800 border border-gray-600 text-white focus:outline-none focus:ring-2 focus:ring-red-500"
               />
             </div>
 
-            {/* Save Button */}
             <div className="flex justify-end mt-4">
               <button
                 type="submit"
@@ -71,7 +75,7 @@ const ProfilePage = () => {
           </form>
         )}
 
-        {/* Bottom Buttons (Always visible) */}
+        {/* Bottom Buttons */}
         <div className="flex justify-between items-center mt-6">
           {!isUpdate && (
             <button

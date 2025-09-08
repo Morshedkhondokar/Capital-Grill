@@ -1,5 +1,5 @@
 import React, { useContext, useState } from "react";
-import { Link } from "react-router";
+import { Link, useLocation, useNavigate } from "react-router";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import AuthContext from "../../context/AuthContext";
 import GoogleLoginBtn from "../GoogleLoginBtn";
@@ -8,6 +8,9 @@ const LoginForm = () => {
   const [showPassword, setShowPassword] = useState(false);
   const [passwordInput, setPasswordInput] = useState("");
   const { loginUser, setUser } = useContext(AuthContext);
+   const navigate = useNavigate();
+  const location = useLocation();
+  const from = location.state?.from?.pathname || "/";
 
   const handleLogin = (e) => {
     e.preventDefault();
@@ -20,6 +23,7 @@ const LoginForm = () => {
       .then((result) => {
         const user = result.user;
         setUser(user);
+        navigate(from, { replace: true });
       })
       .catch((error) => {
         console.log(error);

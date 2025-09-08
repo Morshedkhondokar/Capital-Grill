@@ -3,11 +3,17 @@ import { FaEye, FaEyeSlash } from "react-icons/fa";
 import AuthContext from "../../context/AuthContext";
 import toast from "react-hot-toast";
 import GoogleLoginBtn from '../GoogleLoginBtn'
+import { useLocation, useNavigate } from "react-router";
 
 const RegisterForm = () => {
   const [showPassword, setShowPassword] = useState(false);
   const [passwordInput, setPasswordInput] = useState("");
   const { createNewUser, setUser } = useContext(AuthContext);
+   const navigate = useNavigate();
+  const location = useLocation();
+  const from = location.state?.from?.pathname || "/";
+
+  // user create func
   const handleRegister = (e) => {
     e.preventDefault();
     const name = e.target.name.value;
@@ -23,12 +29,12 @@ const RegisterForm = () => {
       toast.error("Passwords do not match");
       return;
     }
-    alert("log in confirm");
     // user create
     createNewUser(email, password)
       .then((result) => {
         const user = result.user;
         setUser(user);
+        navigate(from, { replace: true });
       })
       .catch((error) => {
         console.log(error);

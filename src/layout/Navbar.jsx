@@ -66,7 +66,16 @@ const Navbar = () => {
       {/* login */}
       <div>
         {
-          user ? <div className="size-8 bg-amber-500 rounded-2xl"></div> : <Link to='/login'>
+          user ?<Link to="/profile"> <div className="size-8 bg-amber-500 rounded-2xl">
+              <img
+            src={
+              user?.photoURL ||
+              "https://i.pinimg.com/474x/07/c4/72/07c4720d19a9e9edad9d0e939eca304a.jpg"
+            }
+            alt="User"
+            className="w-full h-full rounded-full border-2  border-red-500"
+          />
+            </div> </Link>: <Link to='/login'>
           <button className="btn bg-red-500 px-3 py-1 rounded-xl text-white border-none shadow-none">
           Login
         </button>

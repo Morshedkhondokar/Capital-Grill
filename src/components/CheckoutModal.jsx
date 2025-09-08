@@ -2,7 +2,7 @@ import React from "react";
 
 const CheckoutModal = ({ isOpen, onClose, total }) => {
   if (!isOpen) {
-    return false;
+    return null;
   }
 
   return (
